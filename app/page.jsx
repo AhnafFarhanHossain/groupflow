@@ -184,9 +184,11 @@ function Home() {
               </p>
 
               <div className="flex gap-4 pt-4">
-                <Button className="px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-lg font-medium shadow-md hover:shadow-lg cursor-pointer">
-                  Get Started
-                </Button>
+                <Link href={"/authentication"}>
+                  <Button className="px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-lg font-medium shadow-md hover:shadow-lg cursor-pointer">
+                    Get Started
+                  </Button>
+                </Link>
                 <Button
                   variant="outline"
                   className="px-6 py-3 bg-white hover:bg-gray-50 text-gray-800 rounded-lg font-medium shadow-md hover:shadow-lg cursor-pointer"
@@ -242,8 +244,8 @@ function Home() {
           ))}
         </div>
       </section>
-      <section 
-        id="how-it-works" 
+      <section
+        id="how-it-works"
         className="bg-gradient-to-br from-green-50 to-emerald-50"
       >
         <div className="py-16 px-6 max-w-[1300px] min-h-screen mx-auto">
@@ -345,9 +347,11 @@ function Home() {
                   <span className="text-green-300/80 ml-2">/forever</span>
                 </div>
 
-                <Button className="w-full bg-white/10 hover:bg-white/20">
-                  Get Started
-                </Button>
+                <Link href={"/authentication"} className="block">
+                  <Button className="w-full bg-white/10 hover:bg-white/20">
+                    Get Started
+                  </Button>
+                </Link>
 
                 <ul className="space-y-3">
                   {[
@@ -456,12 +460,14 @@ function Home() {
           </div>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="w-[160px] bg-green-700 hover:bg-green-800 text-white"
-            >
-              Get Started
-            </Button>
+            <Link href={"/authentication"}>
+              <Button
+                size="lg"
+                className="w-[160px] bg-green-700 hover:bg-green-800 text-white"
+              >
+                Get Started
+              </Button>
+            </Link>
             <Link href="mailto:ahnaffarhanhossain@gmail.com">
               <Button
                 variant="outline"

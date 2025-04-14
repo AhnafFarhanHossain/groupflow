@@ -40,16 +40,26 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <h2 className="text-2xl font-bold text-gray-800">GroupFlow</h2>
             <p className="text-gray-600 max-w-md">
-              Simplifying group projects and collaboration for students. Manage tasks, deadlines, and teams all in one place.
+              Simplifying group projects and collaboration for students. Manage
+              tasks, deadlines, and teams all in one place.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-gray-600 hover:text-green-700 transition-colors">
+              <Link
+                href="#"
+                className="text-gray-600 hover:text-green-700 transition-colors"
+              >
                 <TwitterIcon className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-green-700 transition-colors">
+              <Link
+                href="#"
+                className="text-gray-600 hover:text-green-700 transition-colors"
+              >
                 <LinkedinIcon className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-green-700 transition-colors">
+              <Link
+                href="#"
+                className="text-gray-600 hover:text-green-700 transition-colors"
+              >
                 <GithubIcon className="h-5 w-5" />
               </Link>
             </div>
@@ -83,10 +93,16 @@ export default function Footer() {
               © {new Date().getFullYear()} GroupFlow. All rights reserved.
             </p>
             <div className="flex gap-8">
-              <Link href="#" className="text-sm text-gray-600 hover:text-green-700">
+              <Link
+                href="#"
+                className="text-sm text-gray-600 hover:text-green-700"
+              >
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-sm text-gray-600 hover:text-green-700">
+              <Link
+                href="#"
+                className="text-sm text-gray-600 hover:text-green-700"
+              >
                 Terms of Service
               </Link>
             </div>

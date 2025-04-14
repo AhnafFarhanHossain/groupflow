@@ -27,12 +27,6 @@ function Navbar() {
               Home
             </Link>
             <Link
-              href={"#"}
-              className="text-gray-600 hover:text-green-700 transition text-sm"
-            >
-              About
-            </Link>
-            <Link
               href={"#features"}
               className="text-gray-600 hover:text-green-700 transition text-sm"
             >
@@ -131,9 +125,11 @@ function Navbar() {
 
         {/* Desktop Button */}
         <div className="hidden md:flex items-center gap-6">
-          <Button className="px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-lg font-medium shadow-md hover:shadow-lg cursor-pointer">
-            Get Started
-          </Button>
+          <Link href={"/authentication"}>
+            <Button className="px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-lg font-medium shadow-md hover:shadow-lg cursor-pointer">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

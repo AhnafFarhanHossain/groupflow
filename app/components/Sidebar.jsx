@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -50,12 +51,20 @@ export default function Sidebar() {
     },
   ];
 
+  const handleMouseEnter = () => {
+    document.documentElement.style.setProperty("--sidebar-width", "240px");
+  };
+
+  const handleMouseLeave = () => {
+    document.documentElement.style.setProperty("--sidebar-width", "70px");
+  };
+
   return (
-    <aside 
+    <aside
       className="group fixed left-0 top-0 h-screen bg-white transition-[width] duration-300 ease-in-out z-40 border-r border-gray-200"
-      style={{ width: 'var(--sidebar-width, 70px)' }}
-      onMouseEnter={() => document.documentElement.style.setProperty('--sidebar-width', '240px')}
-      onMouseLeave={() => document.documentElement.style.setProperty('--sidebar-width', '70px')}
+      style={{ width: "var(--sidebar-width, 70px)" }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="flex flex-col h-full">
         {/* Logo Section */}

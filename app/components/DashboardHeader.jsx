@@ -5,14 +5,26 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Search, Plus } from "lucide-react";
 import getBreadcrumbs from "@/lib/action/getBreadcrumb";
+import { Users } from "lucide-react";
+import { useState } from "react";
+import CreateTeamForm from "./CreateTeamForm";
 
-export default function DashboardHeader({ openCreateProject }) {
+export default function DashboardHeader({
+  openCreateProject,
+  setShowTeamForm,
+  showTeamForm,
+}) {
   const pathname = usePathname();
   const breadcrumbs = getBreadcrumbs(pathname);
   const pageName =
     breadcrumbs.length > 0
       ? breadcrumbs[breadcrumbs.length - 1].name
       : "Dashboard";
+
+  // Functions Take Place Here
+  const handleShowTeamForm = () => {
+    setShowTeamForm(!showTeamForm);
+  };
 
   return (
     <header className="sticky top-0 z-30 w-full bg-white border-b border-gray-100">
@@ -53,7 +65,14 @@ export default function DashboardHeader({ openCreateProject }) {
               <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
             </div>
             <Button
-              className="bg-green-700 hover:bg-green-800 text-white gap-2"
+              className="bg-black hover:bg-black/80 text-white cursor-pointer"
+              onClick={handleShowTeamForm}
+            >
+              <Users className="w-4 h-4" />
+              Create a Team
+            </Button>
+            <Button
+              className="bg-green-700 hover:bg-green-800 text-white gap-2 cursor-pointer"
               onClick={openCreateProject}
             >
               <Plus className="h-4 w-4" />
